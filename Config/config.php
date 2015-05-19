@@ -1,5 +1,10 @@
 <?php
 
 return [
-    'prefix' => 'administrator'
+    'prefix' => 'administrator',
+    
+    'middleware' => [
+    	'auth',
+    	'cms.auth'
+    ]
 ];
