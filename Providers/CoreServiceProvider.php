@@ -16,11 +16,29 @@ class CoreServiceProvider extends ServiceProvider
     {
         \Lang::addNamespace('core', __DIR__.'/../Resources/lang');
 
-        \View::addNamespace('core', __DIR__.'/../Resources/views');
-
         $this->registerConfig();
 
+        $this->registerViews();
+
         $this->listenRoutes();
+    }
+
+    /**
+     * Register views.
+     * 
+     * @return void
+     */
+    protected function registerViews()
+    {
+        $viewPath = base_path('resources/views/modules/pingpongcms/core');
+
+        $sourcePath = __DIR__.'/../Resources/views';
+
+        $this->publishes([
+            $sourcePath => $viewPath
+        ]);
+
+        $this->loadViewsFrom([$viewPath, $sourcePath], 'core');
     }
 
     protected function listenRoutes()
