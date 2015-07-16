@@ -24,8 +24,4 @@ Route::group(['prefix' => cms()->prefix(), 'middleware' => config('cms.middlewar
         'as' => 'admin.index',
         'uses' => 'CoreController@index'
     ]);
-    Route::get('/users', [
-        'as' => 'admin.users.index',
-        'uses' => 'UsersController@index'
-    ]);
 });
