@@ -5,6 +5,7 @@
     "keywords": [],
     "active": 1,
     "order": -1,
+    "protected": true,
     "providers": [
         "Pingpong\\Cms\\Core\\Providers\\BusServiceProvider",
         "Pingpong\\Cms\\Core\\Providers\\RouteServiceProvider",
@@ -14,7 +15,7 @@
         "Laracasts\\Flash\\FlashServiceProvider",
         "Pingpong\\Menus\\MenusServiceProvider"
     ],
-    "aliases":{
+    "aliases": {
         "Flash": "Laracasts\\Flash\\Flash",
         "Menu": "Pingpong\\Menus\\MenuFacade"
     },
